@@ -16,7 +16,7 @@ export default function App() {
               <Jumbotron.Image src={item.image} alt={item.alt} />
             </Jumbotron.Pane>
           </Jumbotron>
-        )
+        );
       })}
     </Jumbotron.Container>
   );
