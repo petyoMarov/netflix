@@ -10,7 +10,7 @@ Header.Frame = function HeaderFrame({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 };
 
-Header.ButtonLink = function HeaderButtonLink({ children, restProps }) {
+Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {
   return <ButtonLink {...restProps}>{children}</ButtonLink>;
 };
 
