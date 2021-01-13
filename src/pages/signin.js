@@ -29,7 +29,7 @@ export default function Signin() {
         setEmailAddress('');
         setPassword('');
         setError(error.message);
-      })
+      });
   };
 
   return (
@@ -55,6 +55,7 @@ export default function Signin() {
               Sign In
             </Form.Submit>
           </Form.Base>
+
           <Form.Text>
             New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
           </Form.Text>
