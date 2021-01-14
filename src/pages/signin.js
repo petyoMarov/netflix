@@ -46,6 +46,7 @@ export default function Signin() {
               onChange={({ target }) => setEmailAddress(target.value)}
             />
             <Form.Input
+              type="password"
               placeholder="Password"
               autoComplate="off"
               value={password}
