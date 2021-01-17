@@ -1,5 +1,4 @@
 import { createContext } from 'react';
 
-const FirebaseContext = createContext(null);
-
-export { FirebaseContext };
+// eslint-disable-next-line import/prefer-default-export
+export const FirebaseContext = createContext(null);

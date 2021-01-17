@@ -23,8 +23,8 @@ export default function Signup() {
     firebase
       .auth()
       .createUserWithEmailAndPassword(emailAddress, password)
-      .then((result) => {
-        result.user
+      .then((user) => {
+        user
           .updateProfile({
             displayName: firstName,
             photoURL: Math.floor(Math.random() * 5) + 1,

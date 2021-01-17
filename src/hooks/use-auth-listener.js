@@ -15,9 +15,9 @@ export default function useAuthListener() {
         localStorage.removeItem('authUser');
         setUser(null);
       }
-
-      return () => listener();
     });
+
+    return () => listener();
   }, []);
 
   return { user };

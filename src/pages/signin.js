@@ -30,6 +30,8 @@ export default function Signin() {
         setPassword('');
         setError(error.message);
       });
+
+    console.log(firebase.auth().currentUser);
   };
 
   return (
