@@ -17,6 +17,7 @@ import {
   Search,
   SearchIcon,
   SearchInput,
+  PlayButton,
 } from './styles/header';
 
 export default function Header({ bg = true, children, ...restProps }) {
@@ -71,6 +72,10 @@ Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
 
 Header.Group = function HeaderGroup({ children, ...restProps }) {
   return <Group {...restProps}>{children}</Group>;
+};
+
+Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
+  return <PlayButton {...restProps}>{children}</PlayButton>;
 };
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {

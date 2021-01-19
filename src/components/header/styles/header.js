@@ -21,7 +21,7 @@ export const Group = styled.div`
 export const Container = styled.div`
   display: flex;
   margin: 0 56px;
-  height: 64px;
+  height: 100px;
   padding: 18px 0;
   justify-content: space-between;
   align-items: center;
@@ -48,7 +48,7 @@ export const Link = styled.p`
 `;
 
 export const Picture = styled.button`
-  background: url(${({src}) => src});
+  background: url(${({ src }) => src});
   background-size: contain;
   border: 0;
   width: 32px;
@@ -142,6 +142,26 @@ export const Profile = styled.div`
   &:hover > ${Dropdown} {
     display: flex;
     flex-direction: column;
+  }
+`;
+
+export const PlayButton = styled.button`
+  box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);
+  background-color: #e6e6e6;
+  color: #000;
+  font-weight: bold;
+  border-width: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  max-width: 130px;
+  font-size: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 1 ease;
+
+  &:hover {
+    background-color: #ff1e1e;
+    color: white;
   }
 `;
 
