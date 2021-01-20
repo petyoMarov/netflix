@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
-// eslint-disable-next-line prettier/prettier
 import {
   Background,
   ButtonLink,
@@ -28,6 +27,7 @@ Header.Feature = function HeaderFeature({ children, ...restProps }) {
   return <Feature {...restProps}>{children}</Feature>;
 };
 
+// eslint-disable-next-line prettier/prettier
 Header.FeatureCallOut = function HeaderFeatureCallOut({ children, ...restProps }) {
   return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>;
 };
@@ -40,12 +40,18 @@ Header.Picture = function HeaderPicture({ src, ...restProps }) {
   return <Picture {...restProps} src={`/images/users/${src}.png`} />;
 };
 
-Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps }) {
+Header.Search = function HeaderSearch({
+  searchTerm,
+  setSearchTerm,
+  ...restProps
+}) {
   const [searchActive, setSearchActive] = useState(false);
 
   return (
     <Search {...restProps}>
-      <SearchIcon onClick={() => setSearchActive((searchActive) => !searchActive)}>
+      <SearchIcon
+        onClick={() => setSearchActive((searchActive) => !searchActive)}
+      >
         <img src="/images/icons/search.png" alt="Search" />
       </SearchIcon>
       <SearchInput
