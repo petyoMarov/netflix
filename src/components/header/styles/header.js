@@ -39,7 +39,7 @@ export const Link = styled.p`
   color: white;
   text-decoration: none;
   margin-right: 30px;
-  font-weight: ${({ active }) => (active) === 'true' ? '700px' : 'normal'};
+  font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
   cursor: pointer;
 
   &:hover {
@@ -157,7 +157,7 @@ export const PlayButton = styled.button`
   font-size: 20px;
   margin-top: 30px;
   cursor: pointer;
-  transition: background-color 1 ease;
+  transition: background-color 0.2s;
 
   &:hover {
     background-color: #ff1e1e;
@@ -196,7 +196,7 @@ export const ButtonLink = styled(ReactRouterLink)`
 `;
 
 export const Feature = styled(Container)`
-  padding: 150px 0 150px 0;
+  padding: 150px 0 500px 0;
   flex-direction: column;
   align-items: normal;
   width: 50%;
