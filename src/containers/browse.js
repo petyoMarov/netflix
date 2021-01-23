@@ -1,9 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react';
 import SelectProfileContainer from './profiles';
+import FooterContainer from './footer';
 import { FirebaseContext } from '../context/firebase';
-import { Card, Header, Loading } from '../components';
+import { Card, Header, Loading, PLayer } from '../components';
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
+import Player from '../components/player';
 
 export default function BrowseContainer({ slides }) {
   const [category, setCategory] = useState('series');
@@ -101,15 +103,16 @@ export default function BrowseContainer({ slides }) {
                 })}
               </Card.Enteties>
               <Card.Feature category={category}>
-                {/* <PLayer>
-                  <Player.Button />
-                  <Player.Video src={"/videos/bunny.mp4"} />
-                </PLayer> */}
+                <PLayer>
+                  <PLayer.Button />
+                  <Player.Video src="/videos/bunny.mp4" />
+                </PLayer>
               </Card.Feature>
             </Card>
           );
         })}
       </Card.Group>
+      <FooterContainer />
     </>
   ) : (
     <SelectProfileContainer user={user} setProfile={setProfile} />
