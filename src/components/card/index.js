@@ -48,7 +48,7 @@ Card.Text = function CardText({ children, ...restProps }) {
   return <Text {...restProps}>{children}</Text>;
 };
 
-Card.Enteties = function CardEnteties({ children, ...restProps }) {
+Card.Entities = function CardEntities({ children, ...restProps }) {
   return <Entities {...restProps}>{children}</Entities>;
 };
 
