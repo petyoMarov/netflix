@@ -3,10 +3,9 @@ import Fuse from 'fuse.js';
 import SelectProfileContainer from './profiles';
 import FooterContainer from './footer';
 import { FirebaseContext } from '../context/firebase';
-import { Card, Header, Loading, PLayer } from '../components';
+import { Card, Header, Loading, Player } from '../components';
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
-import Player from '../components/player';
 
 export default function BrowseContainer({ slides }) {
   const [category, setCategory] = useState('series');
@@ -101,7 +100,7 @@ export default function BrowseContainer({ slides }) {
           return (
             <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
               <Card.Title>{slideItem.title}</Card.Title>
-              <Card.Enteties>
+              <Card.Entities>
                 {slideItem.data.map((item) => {
                   return (
                     <Card.Item key={item.docId} item={item}>
@@ -115,12 +114,12 @@ export default function BrowseContainer({ slides }) {
                     </Card.Item>
                   );
                 })}
-              </Card.Enteties>
+              </Card.Entities>
               <Card.Feature category={category}>
-                <PLayer>
-                  <PLayer.Button />
+                <Player>
+                  <Player.Button />
                   <Player.Video src="/videos/bunny.mp4" />
-                </PLayer>
+                </Player>
               </Card.Feature>
             </Card>
           );
