@@ -42,7 +42,7 @@ export default function BrowseContainer({ slides }) {
 
   return profile.displayName ? (
     <>
-      {loading ? <Loading src={user.photoURL} /> : <Loading.RealeaseBody />}
+      {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
 
       <Header src="joker1" dontShowOnSmallViewPort>
         <Header.Frame>
